@@ -21,6 +21,7 @@ let package = Package(
         .target(
             name: "SwiftLink",
             path: "SwiftLink",
+            publicHeadersPath: "",
             cxxSettings: [
                 .headerSearchPath("../link/include"),
                 .headerSearchPath("../link/modules/asio-standalone/asio/include"),
