@@ -13,6 +13,7 @@
 - (void) enableStartStopSync:(bool)bEnable;
 - (void) enable:(bool)bEnable;
 - (double) tempo;
+- (double) phase:(double)quantum;
 - (void) setTempo:(double)bpm;
 - (NSUInteger) numPeers;
 - (void) initCallbacks;

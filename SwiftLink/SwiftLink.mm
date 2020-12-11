@@ -65,6 +65,13 @@
   return state.tempo();
 }
 
+- (double) phase:(double)quantum {
+  const ableton::Link::SessionState state = self.internal->captureAppSessionState();
+  const ableton::Link::Clock clock = self.internal->clock();
+  const std::chrono::microseconds now = clock.micros();
+  return state.phaseAtTime(now, quantum);
+}
+
 - (void) setTempo:(double)bpm {
   ableton::Link::SessionState state = self.internal->captureAppSessionState();
   const ableton::Link::Clock clock = self.internal->clock();
